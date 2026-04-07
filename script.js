@@ -127,9 +127,14 @@ async function loadData() {
         if (videoContainer) renderVideos(data.videos);
         if (data.testimonies) renderTestimonies(data.testimonies);
 
-        // Restore saved Drive folder IDs from previous session
-        const savedMeeting = localStorage.getItem('drive_meeting-gallery');
-        const savedDist = localStorage.getItem('drive_distribution-gallery');
+        // Default Folder IDs for Auto-loading
+        const DEFAULT_MEETING_FOLDER = '1q2KUpsMx71Ik7NWa3EysckN_zapaxz2O';
+        const DEFAULT_DIST_FOLDER = '1QXECStrEjD_9SPnUJkbJHTe1cYQoFZ3m';
+
+        // Restore saved Drive folder IDs from previous session or use defaults
+        const savedMeeting = localStorage.getItem('drive_meeting-gallery') || DEFAULT_MEETING_FOLDER;
+        const savedDist = localStorage.getItem('drive_distribution-gallery') || DEFAULT_DIST_FOLDER;
+        
         if (savedMeeting) {
             document.getElementById('meeting-folder-id').value = savedMeeting;
             loadDrivePhotos('meeting-gallery', savedMeeting);
