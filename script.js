@@ -32,24 +32,24 @@ const DEFAULT_DATA = {
         { "title": "호주머니 속에 임하신 하나님의 나라", "date": "2024-02-09", "link": "https://kgideons.org/bbs/board.php?bo_table=B14&wr_id=159" }
     ],
     "videos": [
-        { "title": "준비된 성경", "thumbnail": "https://img.youtube.com/vi/rUkAtQ4a4zw/maxresdefault.jpg", "link": "https://www.youtube.com/watch?v=rUkAtQ4a4zw" },
-        { "title": "기드온 소개", "thumbnail": "https://img.youtube.com/vi/IEno3KcFUqg/maxresdefault.jpg", "link": "https://www.youtube.com/watch?v=IEno3KcFUqg" },
-        { "title": "하나님의 말씀", "thumbnail": "https://img.youtube.com/vi/d01fnKVMLUA/maxresdefault.jpg", "link": "https://www.youtube.com/watch?v=d01fnKVMLUA" },
-        { "title": "생명의 복음", "thumbnail": "https://img.youtube.com/vi/jUyidNXIAmM/maxresdefault.jpg", "link": "https://www.youtube.com/watch?v=jUyidNXIAmM" }
+        { "title": "준비된 성경", "thumbnail": "https://img.youtube.com/vi/rUkAtQ4a4zw/hqdefault.jpg", "link": "https://www.youtube.com/watch?v=rUkAtQ4a4zw" },
+        { "title": "기드온 소개", "thumbnail": "https://img.youtube.com/vi/IEno3KcFUqg/hqdefault.jpg", "link": "https://www.youtube.com/watch?v=IEno3KcFUqg" },
+        { "title": "하나님의 말씀", "thumbnail": "https://img.youtube.com/vi/d01fnKVMLUA/hqdefault.jpg", "link": "https://www.youtube.com/watch?v=d01fnKVMLUA" },
+        { "title": "생명의 복음", "thumbnail": "https://img.youtube.com/vi/jUyidNXIAmM/hqdefault.jpg", "link": "https://www.youtube.com/watch?v=jUyidNXIAmM" }
     ],
     "testimonies": [
-        { "title": "간증영상 1", "thumbnail": "https://img.youtube.com/vi/isPbD3DG5Y8/maxresdefault.jpg", "link": "https://www.youtube.com/watch?v=isPbD3DG5Y8" },
-        { "title": "간증영상 2", "thumbnail": "https://img.youtube.com/vi/u8qkFl1nfrA/maxresdefault.jpg", "link": "https://www.youtube.com/watch?v=u8qkFl1nfrA" },
-        { "title": "간증영상 3", "thumbnail": "https://img.youtube.com/vi/ordaJzmpm3c/maxresdefault.jpg", "link": "https://www.youtube.com/watch?v=ordaJzmpm3c" },
-        { "title": "간증영상 4", "thumbnail": "https://img.youtube.com/vi/spvna3FVPCU/maxresdefault.jpg", "link": "https://www.youtube.com/watch?v=spvna3FVPCU" }
+        { "title": "간증영상 1", "thumbnail": "https://img.youtube.com/vi/isPbD3DG5Y8/hqdefault.jpg", "link": "https://www.youtube.com/watch?v=isPbD3DG5Y8" },
+        { "title": "간증영상 2", "thumbnail": "https://img.youtube.com/vi/u8qkFl1nfrA/hqdefault.jpg", "link": "https://www.youtube.com/watch?v=u8qkFl1nfrA" },
+        { "title": "간증영상 3", "thumbnail": "https://img.youtube.com/vi/ordaJzmpm3c/hqdefault.jpg", "link": "https://www.youtube.com/watch?v=ordaJzmpm3c" },
+        { "title": "간증영상 4", "thumbnail": "https://img.youtube.com/vi/spvna3FVPCU/hqdefault.jpg", "link": "https://www.youtube.com/watch?v=spvna3FVPCU" }
     ],
     "meetingPhotos": [
-        { "caption": "지회 모임 현장 1", "url": "./image/모임사진/KakaoTalk_20260406_185746346_11.jpg" },
-        { "caption": "지회 모임 현장 2", "url": "./image/모임사진/KakaoTalk_20260406_185746346_12.jpg" }
+        { "caption": "지회 모임 현장 1", "url": "./image/meeting/KakaoTalk_20260406_185746346_11.jpg" },
+        { "caption": "지회 모임 현장 2", "url": "./image/meeting/KakaoTalk_20260406_185746346_12.jpg" }
     ],
     "distributionPhotos": [
-        { "caption": "성경 배부 사역 1", "url": "./image/성경배부/KakaoTalk_20260406_115657131.jpg" },
-        { "caption": "성경 배부 사역 2", "url": "./image/성경배부/KakaoTalk_20260406_115657131_01.jpg" }
+        { "caption": "성경 배부 사역 1", "url": "./image/bible-dist/KakaoTalk_20260406_115657131.jpg" },
+        { "caption": "성경 배부 사역 2", "url": "./image/bible-dist/KakaoTalk_20260406_115657131_01.jpg" }
     ]
 };
 
@@ -139,10 +139,9 @@ async function loadData() {
         const DEFAULT_MEETING_FOLDER = '1q2KUpsMx71Ik7NWa3EysckN_zapaxz2O';
         const DEFAULT_DIST_FOLDER = '1QXECStrEjD_9SPnUJkbJHTe1cYQoFZ3m';
 
-        // Restore saved Drive folder IDs from previous session or use defaults
+        /* Drive API calls are temporarily disabled to prioritize local assets
         const savedMeeting = localStorage.getItem('drive_meeting-gallery') || DEFAULT_MEETING_FOLDER;
         const savedDist = localStorage.getItem('drive_distribution-gallery') || DEFAULT_DIST_FOLDER;
-        
         if (savedMeeting) {
             document.getElementById('meeting-folder-id').value = savedMeeting;
             loadDrivePhotos('meeting-gallery', savedMeeting);
@@ -151,6 +150,7 @@ async function loadData() {
             document.getElementById('distribution-folder-id').value = savedDist;
             loadDrivePhotos('distribution-gallery', savedDist);
         }
+        */
 
     } catch (error) {
         console.error('Error loading data:', error);
