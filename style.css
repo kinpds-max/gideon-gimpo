@@ -153,16 +153,18 @@ nav a:hover::after {
   top: 50%;
   left: 50%;
   width: 100vw;
-  height: 100vh;
+  height: 56.25vw;
+  min-height: 100vh;
+  min-width: 177.77vh;
   transform: translate(-50%, -50%);
   pointer-events: none;
 }
-
-@media (min-aspect-ratio: 16/9) {
-  .video-foreground { width: 100%; height: 100vh; scale: 1.5; }
-}
-@media (max-aspect-ratio: 16/9) {
-  .video-foreground { width: 100vw; height: 100%; scale: 3; }
+@media (max-width: 768px) {
+  .video-foreground,
+  .video-background iframe {
+    width: 300vw;
+    height: 100vh;
+  }
 }
 
 .hero::after {
