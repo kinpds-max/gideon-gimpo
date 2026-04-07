@@ -1,0 +1,47 @@
+{
+  "news": [
+    {
+      "title": "방황하던 내게 위로가 된 기드온성경",
+      "date": "2024-04-02",
+      "link": "https://kgideons.org/bbs/board.php?bo_table=B14&wr_id=161"
+    },
+    {
+      "title": "담배 종이로 쓰이던 기드온성경, 생명의 전달자",
+      "date": "2024-03-10",
+      "link": "https://kgideons.org/bbs/board.php?bo_table=B14&wr_id=160"
+    },
+    {
+      "title": "호주머니 속에 임하신 하나님의 나라",
+      "date": "2024-02-09",
+      "link": "https://kgideons.org/bbs/board.php?bo_table=B14&wr_id=159"
+    },
+    {
+      "title": "멈출 수 없는 사역, 기드온!",
+      "date": "2024-01-09",
+      "link": "https://kgideons.org/bbs/board.php?bo_table=B14&wr_id=158"
+    },
+    {
+      "title": "2025 축 성탄!",
+      "date": "2023-12-09",
+      "link": "https://kgideons.org/bbs/board.php?bo_table=B14&wr_id=157"
+    }
+  ],
+  "videos": [
+    {
+      "title": "국제기드온협회 사역 소개",
+      "thumbnail": "https://img.youtube.com/vi/A5vO1Xb-S6Q/maxresdefault.jpg",
+      "link": "https://www.youtube.com/watch?v=A5vO1Xb-S6Q"
+    },
+    {
+      "title": "기드온의 유일한 목적",
+      "thumbnail": "https://img.youtube.com/vi/8O5nOqG8V5o/maxresdefault.jpg",
+      "link": "https://www.youtube.com/watch?v=8O5nOqG8V5o"
+    },
+    {
+      "title": "Gideons International - Who We Are",
+      "thumbnail": "https://img.youtube.com/vi/W_6iL0f07sI/maxresdefault.jpg",
+      "link": "https://www.youtube.com/watch?v=W_6iL0f07sI"
+    }
+  ],
+  "updatedAt": "2024-04-05T23:56:00Z"
+}
