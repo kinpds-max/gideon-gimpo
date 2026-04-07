@@ -44,12 +44,12 @@ const DEFAULT_DATA = {
         { "title": "간증영상 4", "thumbnail": "https://img.youtube.com/vi/spvna3FVPCU/maxresdefault.jpg", "link": "https://www.youtube.com/watch?v=spvna3FVPCU" }
     ],
     "meetingPhotos": [
-        { "caption": "모임사진 1", "url": "https://lh3.googleusercontent.com/d/10hoG2SQBqLaPKTarOi4A1oodMxrVCRNU" },
-        { "caption": "모임사진 2", "url": "https://lh3.googleusercontent.com/d/1k3Gep1vObrH1c2I1Fg_jBBqWcZ5PRqaH" }
+        { "caption": "지회 모임 현장 1", "url": "./image/모임사진/KakaoTalk_20260406_185746346_11.jpg" },
+        { "caption": "지회 모임 현장 2", "url": "./image/모임사진/KakaoTalk_20260406_185746346_12.jpg" }
     ],
     "distributionPhotos": [
-        { "caption": "성경배부 1", "url": "https://lh3.googleusercontent.com/d/1hZz3XXoQ7ns5eMlw_gfqn_vXfLya19zR" },
-        { "caption": "성경배부 2", "url": "https://lh3.googleusercontent.com/d/1oTBMiN-uro1qtKnMhO6VN_v1u8Zbpc_t" }
+        { "caption": "성경 배부 사역 1", "url": "./image/성경배부/KakaoTalk_20260406_115657131.jpg" },
+        { "caption": "성경 배부 사역 2", "url": "./image/성경배부/KakaoTalk_20260406_115657131_01.jpg" }
     ]
 };
 
