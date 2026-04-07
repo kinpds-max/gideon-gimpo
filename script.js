@@ -37,6 +37,12 @@ const DEFAULT_DATA = {
         { "title": "하나님의 말씀", "thumbnail": "https://img.youtube.com/vi/d01fnKVMLUA/maxresdefault.jpg", "link": "https://www.youtube.com/watch?v=d01fnKVMLUA" },
         { "title": "생명의 복음", "thumbnail": "https://img.youtube.com/vi/jUyidNXIAmM/maxresdefault.jpg", "link": "https://www.youtube.com/watch?v=jUyidNXIAmM" }
     ],
+    "testimonies": [
+        { "title": "간증영상 1", "thumbnail": "https://img.youtube.com/vi/isPbD3DG5Y8/maxresdefault.jpg", "link": "https://www.youtube.com/watch?v=isPbD3DG5Y8" },
+        { "title": "간증영상 2", "thumbnail": "https://img.youtube.com/vi/u8qkFl1nfrA/maxresdefault.jpg", "link": "https://www.youtube.com/watch?v=u8qkFl1nfrA" },
+        { "title": "간증영상 3", "thumbnail": "https://img.youtube.com/vi/ordaJzmpm3c/maxresdefault.jpg", "link": "https://www.youtube.com/watch?v=ordaJzmpm3c" },
+        { "title": "간증영상 4", "thumbnail": "https://img.youtube.com/vi/spvna3FVPCU/maxresdefault.jpg", "link": "https://www.youtube.com/watch?v=spvna3FVPCU" }
+    ],
     "meetingPhotos": [],
     "distributionPhotos": []
 };
@@ -119,6 +125,7 @@ async function loadData() {
         renderNews(data.news);
         if (data.stats) renderStats(data.stats);
         if (videoContainer) renderVideos(data.videos);
+        if (data.testimonies) renderTestimonies(data.testimonies);
 
         // Restore saved Drive folder IDs from previous session
         const savedMeeting = localStorage.getItem('drive_meeting-gallery');
@@ -193,31 +200,45 @@ function renderNews(newsList) {
 
 function renderVideos(videoList) {
     const videoContainer = document.getElementById('video-container');
-    videoContainer.innerHTML = ''; // Clear skeleton
-
+    if (!videoContainer) return;
+    videoContainer.innerHTML = '';
     videoList.forEach((video, index) => {
-        // Extract YouTube ID from link
         const ytMatch = video.link.match(/(?:v=|youtu\.be\/)([\w-]{11})/);
         const ytId = ytMatch ? ytMatch[1] : '';
-
-        const card = document.createElement('div');
-        card.className = 'video-card';
-        card.style.animation = `fadeInUp 0.8s ${index * 0.1}s forwards`;
-        card.style.opacity = '0';
-        card.style.cursor = 'pointer';
-        card.onclick = () => openYtModal(ytId);
-
-        card.innerHTML = `
-            <img src="${video.thumbnail}" alt="${video.title}">
-            <div class="video-overlay">
-                <h3>${video.title}</h3>
-            </div>
-            <div class="play-btn">
-                <i class="fa-solid fa-play"></i>
-            </div>
-        `;
+        const card = createVideoCard(video, ytId, index);
         videoContainer.appendChild(card);
     });
+}
+
+function renderTestimonies(videoList) {
+    const testimonyContainer = document.getElementById('testimony-container');
+    if (!testimonyContainer) return;
+    testimonyContainer.innerHTML = '';
+    videoList.forEach((video, index) => {
+        const ytMatch = video.link.match(/(?:v=|youtu\.be\/)([\w-]{11})/);
+        const ytId = ytMatch ? ytMatch[1] : '';
+        const card = createVideoCard(video, ytId, index);
+        testimonyContainer.appendChild(card);
+    });
+}
+
+function createVideoCard(video, ytId, index) {
+    const card = document.createElement('div');
+    card.className = 'video-card';
+    card.style.animation = `fadeInUp 0.8s ${index * 0.1}s forwards`;
+    card.style.opacity = '0';
+    card.style.cursor = 'pointer';
+    card.onclick = () => openYtModal(ytId);
+    card.innerHTML = `
+        <img src="${video.thumbnail}" alt="${video.title}">
+        <div class="video-overlay">
+            <h3>${video.title}</h3>
+        </div>
+        <div class="play-btn">
+            <i class="fa-solid fa-play"></i>
+        </div>
+    `;
+    return card;
 }
 
 // YouTube Modal
