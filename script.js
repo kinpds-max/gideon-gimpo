@@ -32,10 +32,10 @@ const DEFAULT_DATA = {
         { "title": "호주머니 속에 임하신 하나님의 나라", "date": "2024-02-09", "link": "https://kgideons.org/bbs/board.php?bo_table=B14&wr_id=159" }
     ],
     "videos": [
-        { "title": "국제기드온협회 사역소개 영상", "thumbnail": "https://img.youtube.com/vi/rUkAtQ4a4zw/maxresdefault.jpg", "link": "https://www.youtube.com/watch?v=rUkAtQ4a4zw" },
-        { "title": "국내 6천만 권 성경배부 기념 영상", "thumbnail": "https://img.youtube.com/vi/IEno3KcFUqg/maxresdefault.jpg", "link": "https://www.youtube.com/watch?v=IEno3KcFUqg" },
-        { "title": "국제기드온협회 히스토리 영상", "thumbnail": "https://img.youtube.com/vi/d01fnKVMLUA/maxresdefault.jpg", "link": "https://www.youtube.com/watch?v=d01fnKVMLUA" },
-        { "title": "20-21 교회순방영상", "thumbnail": "https://img.youtube.com/vi/SlG4XqpivwE/maxresdefault.jpg", "link": "https://www.youtube.com/watch?v=SlG4XqpivwE" }
+        { "title": "준비된 성경", "thumbnail": "https://img.youtube.com/vi/rUkAtQ4a4zw/maxresdefault.jpg", "link": "https://www.youtube.com/watch?v=rUkAtQ4a4zw" },
+        { "title": "기드온 소개", "thumbnail": "https://img.youtube.com/vi/IEno3KcFUqg/maxresdefault.jpg", "link": "https://www.youtube.com/watch?v=IEno3KcFUqg" },
+        { "title": "하나님의 말씀", "thumbnail": "https://img.youtube.com/vi/d01fnKVMLUA/maxresdefault.jpg", "link": "https://www.youtube.com/watch?v=d01fnKVMLUA" },
+        { "title": "생명의 복음", "thumbnail": "https://img.youtube.com/vi/jUyidNXIAmM/maxresdefault.jpg", "link": "https://www.youtube.com/watch?v=jUyidNXIAmM" }
     ],
     "meetingPhotos": [],
     "distributionPhotos": []
