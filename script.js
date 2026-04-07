@@ -43,8 +43,14 @@ const DEFAULT_DATA = {
         { "title": "간증영상 3", "thumbnail": "https://img.youtube.com/vi/ordaJzmpm3c/maxresdefault.jpg", "link": "https://www.youtube.com/watch?v=ordaJzmpm3c" },
         { "title": "간증영상 4", "thumbnail": "https://img.youtube.com/vi/spvna3FVPCU/maxresdefault.jpg", "link": "https://www.youtube.com/watch?v=spvna3FVPCU" }
     ],
-    "meetingPhotos": [],
-    "distributionPhotos": []
+    "meetingPhotos": [
+        { "caption": "모임사진 1", "url": "https://lh3.googleusercontent.com/d/10hoG2SQBqLaPKTarOi4A1oodMxrVCRNU" },
+        { "caption": "모임사진 2", "url": "https://lh3.googleusercontent.com/d/1k3Gep1vObrH1c2I1Fg_jBBqWcZ5PRqaH" }
+    ],
+    "distributionPhotos": [
+        { "caption": "성경배부 1", "url": "https://lh3.googleusercontent.com/d/1hZz3XXoQ7ns5eMlw_gfqn_vXfLya19zR" },
+        { "caption": "성경배부 2", "url": "https://lh3.googleusercontent.com/d/1oTBMiN-uro1qtKnMhO6VN_v1u8Zbpc_t" }
+    ]
 };
 
 // Google Drive Integration
@@ -126,6 +132,8 @@ async function loadData() {
         if (data.stats) renderStats(data.stats);
         if (videoContainer) renderVideos(data.videos);
         if (data.testimonies) renderTestimonies(data.testimonies);
+        if (data.meetingPhotos) renderGallery('meeting-gallery', data.meetingPhotos);
+        if (data.distributionPhotos) renderGallery('distribution-gallery', data.distributionPhotos);
 
         // Default Folder IDs for Auto-loading
         const DEFAULT_MEETING_FOLDER = '1q2KUpsMx71Ik7NWa3EysckN_zapaxz2O';
